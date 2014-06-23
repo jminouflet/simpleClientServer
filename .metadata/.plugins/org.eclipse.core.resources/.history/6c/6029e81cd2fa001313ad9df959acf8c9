@@ -1,23 +1,22 @@
 package clientServer;
 
 import java.io.IOException;
-import java.net.DatagramSocket;
 import java.net.ServerSocket;
 
 
 public class SingletonUDPConnection {
 	static{
 		try {
-			listennerSocket = new DatagramSocket(); // ouverture port 6789
+			listennerSocket = new ServerSocket(6789); // ouverture port 6789
 		} catch (IOException e) {
 			e.printStackTrace();
 		}	
 	}
-	static DatagramSocket listennerSocket;
+	static ServerSocket listennerSocket;
 	/**
 	 * @return toujours la même connection
 	 */
-	public static DatagramSocket getListennerSocket() {
+	public static ServerSocket getListennerSocket() {
 		return listennerSocket;
 	}
 
