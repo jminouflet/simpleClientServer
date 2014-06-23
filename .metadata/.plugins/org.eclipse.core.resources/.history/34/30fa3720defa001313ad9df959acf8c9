@@ -10,23 +10,17 @@ public class ConnectionFactory {
 		TCP
 	}
 
-	public static Object getConnection(String adresse, Protocol protocol) throws Exception{
+	public Object getConnection(String adresse, Protocol protocol) throws Exception{
 		if(protocol == Protocol.TCP){
 			// créer un serveur TCP
+			
 			ServerSocket listennerSocket = SingletonTCPConnection.getListennerSocket();
 			return listennerSocket;
-		} else {
+			} else {
 			// créer un serveur UDP
-			DatagramSocket serverSocket = SingletonUDPConnection.getListennerSocket();
+				DatagramSocket serverSocket = SingletonUDPConnection.getListennerSocket(); //Ouvrir le port 6789
 			return serverSocket;
 		}
 	}
 
-	public void send(String message) throws Exception{
-
-	}
-
-	public  String receive() throws Exception{
-
-	}
 }

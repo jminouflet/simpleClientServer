@@ -17,7 +17,7 @@ public class ConnectionFactory {
 			return listennerSocket;
 		} else {
 			// créer un serveur UDP
-			DatagramSocket serverSocket = SingletonUDPConnection.getListennerSocket();
+			DatagramSocket serverSocket = SingletonUDPConnection.getServerSocket();
 			return serverSocket;
 		}
 	}
