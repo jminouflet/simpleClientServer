@@ -22,11 +22,15 @@ public class ServerTCP {
 			
 			// boucle de réception et d'envoi de messages
 			while(true){
+				try{
 				String line = reader.readLine();	// réception message du client
 				System.out.println("serveur recoit : " + line);
 				writer.write(line);					// envoi réponse au client
 				writer.newLine();					// envoi fin de chaine
 				writer.flush();						// vide la mémoire tampon (force l'envoi)
+				}catch(Exception e) {
+					String n = e.toString();
+				}
 			}
 	       
 		}catch(Exception e){
