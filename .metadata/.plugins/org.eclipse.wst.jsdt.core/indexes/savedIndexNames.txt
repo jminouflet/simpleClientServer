@@ -1,0 +1,7 @@
+INDEX VERSION 1.3+/Users/JML/Documents/workspace/simpleClientServer/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1691378440.index
+2418175319.index
+191017958.index
+445368614.index
+3355160290.index
+2554691827.index
